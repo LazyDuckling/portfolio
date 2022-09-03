@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 # Project files and folders
-figma/
 style-guide.md
