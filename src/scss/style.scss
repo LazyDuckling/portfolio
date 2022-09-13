@@ -1,12 +1,12 @@
 // Global forwards
 @forward "global/variables";
 @forward "global/states";
+@forward "global/typography";
 
 // Util forwards
 @forward "util/functions";
 
 // Mobile forwards
-@forward "mobile/typography";
 @forward "mobile/breakpoints";
 @forward "mobile/main";
 
@@ -18,6 +18,5 @@
 */
 
 // Desktop forwards
-@forward "desktop/typography";
 @forward "desktop/breakpoints";
 @forward "desktop/main";

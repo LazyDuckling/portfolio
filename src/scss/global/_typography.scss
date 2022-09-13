@@ -1,0 +1,33 @@
+@use "../util/functions" as util;
+
+// ---------- Global ----------
+
+// Font Family
+$font-fam: "'Poppins', sans-serif;";
+
+// Weights
+$medium: 500;
+$bold: 700;
+
+// Line Height
+$ls-list: util.rem(5);
+
+// ---------- Desktop ----------
+
+// Font sizes
+$desktop-s: util.rem(16);
+$desktop-m: util.rem(20);
+$desktop-l: util.rem(24);
+$desktop-xl: util.rem(36);
+
+$desktop-h2: util.rem(32);
+$desktop-h1: util.rem(48);
+
+// ---------- Mobile ----------
+
+$mobile-s: util.rem(14);
+$mobile-m: util.rem(16);
+$mobile-l: util.rem(20);
+
+$mobile-h2: util.rem(24);
+$mobile-h1: util.rem(32);
