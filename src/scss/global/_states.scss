@@ -1,7 +1,13 @@
+@use "../util/functions" as util;
+
 .nav__content-link:hover {
     cursor: pointer;
 
     color: var(--purple);
+}
+
+.nav__content-link:hover::after {
+    transform: scaleX(1);
 }
 
 .footer__nav-link:hover {

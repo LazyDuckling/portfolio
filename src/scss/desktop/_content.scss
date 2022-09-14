@@ -1,4 +1,48 @@
+@use "../global/typography" as fonts;
+@use "../util/functions" as util;
+
 .content {
+    display: grid;
+    grid-template: max-content / max-content;
     grid-area: 2 / 2 / 3 / 3;
-    width: unset;
+
+    align-content: center;
+    justify-content: center;
+
+    text-align: center;
+
+    z-index: 1;
+
+    &__header {
+        font-size: calc(fonts.$desktop-h1 + 0.5vw);
+        font-weight: fonts.$medium;
+
+        margin: 0;
+    }
+
+    &__home {
+        font-size: calc(fonts.$desktop-xl + 0.5vw);
+
+        margin: 0;
+    }
+
+    &__background {
+        grid-area: 2 / 1 / 3 / 4;
+        align-self: center;
+        justify-self: center;
+
+        z-index: -5;
+
+        background: linear-gradient(#FDF5FF, rgba(0, 0, 0, 0) 35%), 
+                    linear-gradient(rgba(0, 0, 0, 0) 65%, #FDF5FF), 
+                    linear-gradient(90deg, #FDF5FF, rgba(0, 0, 0, 0) 15%),
+                    linear-gradient(270deg, #FDF5FF, rgba(0, 0, 0, 0) 15%),
+                    url("../../../images/background/squares1.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        opacity: 0.15;    
+
+        width: calc(util.rem(665) + 5vw);
+        height: calc(util.rem(255) + 5vw);
+    }
 }

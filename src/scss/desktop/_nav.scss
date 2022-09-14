@@ -13,6 +13,8 @@
 
     font-size: fonts.$desktop-l;
 
+    max-height: util.rem(116);
+
     &__content {
         justify-self: center;
 
@@ -26,6 +28,41 @@
             margin: util.rem(16);
 
             transition: color 200ms;
+        }
+
+        &-link--inactive:after {
+            position: relative;
+
+            display: block;
+
+            content: "";
+
+            border-style: solid;
+            border-width: 0 0 util.rem(4) 0;
+            border-color: var(--purple);
+
+            transform: scaleX(0);
+            transform-origin: left;
+
+            transition: transform 200ms;
+        }
+
+        &-link--active {
+            color: var(--purple);
+        }
+        
+        &-link--active:after {
+            position: relative;
+
+            display: block;
+
+            content: "";
+
+            border-style: solid;
+            border-width: 0 0 util.rem(4) 0;
+            border-color: var(--purple);
+
+            width: 100%;
         }
 
         &-link:nth-child(1){
