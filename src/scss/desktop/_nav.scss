@@ -1,0 +1,39 @@
+@use "../global/typography" as fonts;
+@use "../util/functions" as util;
+
+.nav {
+    display: grid;
+    grid-area: 1 / 1 / 2 / 4;
+
+    position: sticky;
+
+    background-color: var(--off-white);
+
+    box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.25);
+
+    font-size: fonts.$desktop-l;
+
+    &__content {
+        justify-self: center;
+
+        list-style-type: none;
+
+        padding: 0;
+
+        &-link {
+            display: inline-block;
+
+            margin: util.rem(16);
+
+            transition: color 200ms;
+        }
+
+        &-link:nth-child(1){
+            margin-left: 0;
+        }
+
+        &-link:nth-child(5){
+            margin-right: 0;
+        }
+    }
+}

@@ -4,14 +4,21 @@
 
 :root {
     font-size: util.rem(16);
+    font-weight: fonts.$medium;
+    font-family: fonts.$font-fam;
 }
 
 body {
     margin: 0;
+
     background-color: var(--purplish-white);
+
+    color: var(--dark-gray);
 }
 
 main {
     display: grid;
-    grid-template: max-content 1fr max-content / 1fr max-content, 1fr max-content;
+    grid-template: max-content 1fr max-content / 1fr max-content 1fr;
+
+    height: 100vh;
 }

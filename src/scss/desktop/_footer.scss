@@ -1,0 +1,53 @@
+@use "../global/typography" as fonts;
+@use "../util/functions" as util;
+
+.footer {
+    display: grid;
+    grid-area: 3 / 1 / 4 / 4;
+
+    background-color: var(--off-white);
+
+    border-style: solid;
+    border-width: util.rem(2) 0 0 0;
+    border-color: var(--light-gray);
+
+    &__nav {
+        grid-area: 1 / 1 / 2 / 2;
+        align-self: center;
+
+        &-link {
+            width: util.rem(32);
+
+            display: inline-block;
+            
+            margin: util.rem(22.5) util.rem(24) util.rem(22.5) 0;
+
+            transition: color 200ms;
+        }
+
+        &-content {
+            padding: 0;
+        }
+    }
+
+    &__copyright {
+        grid-area: 1 / 2 / 2 / 3;
+        align-self: center;
+        justify-self: right;
+
+        font-size: fonts.$desktop-l;
+
+        margin: 0;
+    }
+}
+
+.footer a:link, a:visited {
+    color: var(--dark-gray);
+}
+
+.footer__content {
+    display: grid;
+    grid-area: 2 / 2 / 3 / 3;
+
+    width: unset;
+}
