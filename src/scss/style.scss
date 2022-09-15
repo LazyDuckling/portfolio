@@ -1,8 +1,3 @@
-// Global forwards
-@forward "global/variables";
-@forward "global/states";
-@forward "global/typography";
-
 // Util forwards
 @forward "util/functions";
 
@@ -23,3 +18,8 @@
 @forward "desktop/nav";
 @forward "desktop/content";
 @forward "desktop/footer";
+
+// Global forwards
+@forward "global/variables";
+@forward "global/typography";
+@forward "global/states";

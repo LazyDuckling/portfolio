@@ -39,10 +39,11 @@
 
         margin: 0;
     }
-}
 
-.footer a:link, a:visited {
-    color: var(--dark-gray);
+    & a:link, a:visited {
+        color: var(--dark-gray);
+        transition: color 200ms;
+    }
 }
 
 .footer__content {
