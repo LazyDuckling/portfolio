@@ -18,7 +18,7 @@ body {
 
 main {
     display: grid;
-    grid-template: max-content 1fr max-content / 1fr max-content 1fr;
+    grid-template: max-content max-content 1fr max-content / 1fr max-content 1fr;
 
     height: 100vh;
 }

@@ -11,7 +11,6 @@ let navWidth = navElement[0].clientWidth;
 // Function to convert pixel value of nav width to rem, then assign it to elements
 function pixelsToRem(pixels) {
     let contentWidth = pixels / 16 + "rem";
-    contentElement[0].style.width = (contentWidth);
     footerElement[0].style.width = (contentWidth);
 }
 

@@ -1,0 +1,14 @@
+@use "../global/typography" as fonts;
+@use "../util/functions" as util;
+
+.header {
+    grid-area: 2 / 2 / 3 / 3;
+    align-self: start;
+    justify-self: center;
+
+    z-index: 2;
+
+    max-width: fit-content;
+
+    margin: util.rem(42);
+}

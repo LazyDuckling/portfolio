@@ -1,0 +1,77 @@
+@use "../util/functions" as util;
+@use "../global/typography" as fonts;
+
+.content {
+    &__background-about {
+        grid-area: 1 / 1 / 3 / 4;
+        align-self: start;
+        justify-self: center;
+
+        z-index: -5;
+
+        background: linear-gradient(#FDF5FF, rgba(0, 0, 0, 0) 100%), 
+                    linear-gradient(rgba(0, 0, 0, 0) 45%, #FDF5FF), 
+                    linear-gradient(90deg, #FDF5FF, rgba(0, 0, 0, 0) 15%),
+                    linear-gradient(270deg, #FDF5FF, rgba(0, 0, 0, 0) 15%),
+                    url("../../../images/background/squares2.svg");
+        background-repeat: no-repeat;
+        opacity: 0.15;    
+
+        width: calc(util.rem(665) + 5vw);
+        height: calc(util.rem(255) + 5vw);
+    }
+
+    &__about {
+        font-size: fonts.$desktop-m;
+        text-align: left;
+
+        margin: 0 0 util.rem(32) 0;
+
+        &-header {
+            font-size: calc(fonts.$desktop-h1 + 0.5vw);
+            font-weight: fonts.$medium;
+    
+            line-height: calc(util.rem(42) + 0.5vw);
+
+            &:after {
+                position: relative;
+                
+                display: block;
+        
+                content: "";
+        
+                border-style: solid;
+                border-width: 0 0 util.rem(6) 0;
+                border-color: var(--purple);
+        
+                width: 100%;
+            }
+        }
+    }
+
+    &--about {
+        align-content: start !important;
+    }
+}
+
+.logos {
+    display: grid;
+    grid-template: repeat(2, max-content) / repeat(3, max-content);
+    justify-self: center;
+
+    line-height: util.rem(16);
+
+    &__img {
+        width: util.rem(48);
+        margin: util.rem(16) util.rem(16) util.rem(4) util.rem(16);
+
+        &--sass {
+            width: util.rem(48);
+            height: util.rem(54);
+        }
+    }
+
+    &--lastrow {
+        grid-area: 2 / 2 / 3 / 3;
+    }
+}

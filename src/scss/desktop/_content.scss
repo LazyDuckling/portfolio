@@ -3,8 +3,8 @@
 
 .content {
     display: grid;
-    grid-template: max-content / max-content;
-    grid-area: 2 / 2 / 3 / 3;
+    grid-template: max-content / util.rem(700);
+    grid-area: 3 / 2 / 4 / 3;
 
     align-content: center;
     justify-content: center;
@@ -13,11 +13,13 @@
 
     z-index: 1;
 
+    margin: 0 0 util.rem(84) 0;
+
     &__header {
         font-size: calc(fonts.$desktop-h1 + 0.5vw);
         font-weight: fonts.$medium;
 
-        margin: 0;
+        margin: util.rem(84) 0 0 0;
     }
 
     &__home {
@@ -27,7 +29,7 @@
     }
 
     &__background {
-        grid-area: 2 / 1 / 3 / 4;
+        grid-area: 2 / 1 / 4 / 4;
         align-self: center;
         justify-self: center;
 
@@ -44,5 +46,9 @@
 
         width: calc(util.rem(665) + 5vw);
         height: calc(util.rem(255) + 5vw);
+    }
+
+    &--bold {
+        font-weight: fonts.$bold;
     }
 }
