@@ -123,6 +123,8 @@
 
                 background-color: var(--purple);
                 color: var(--off-white);
+
+                transition: color 200ms, background-color 200ms, border 200ms;
             }
         }
 

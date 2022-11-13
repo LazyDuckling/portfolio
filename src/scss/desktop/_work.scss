@@ -1,0 +1,102 @@
+@use "../global/typography" as fonts;
+@use "../util/functions" as util;
+
+.content {
+    &__background-work {
+        grid-area: 1 / 1 / 3 / 4;
+        align-self: start;
+        justify-self: center;
+
+        z-index: -5;
+
+        background: linear-gradient(#FDF5FF, rgba(0, 0, 0, 0) 100%), 
+                    linear-gradient(rgba(0, 0, 0, 0) 45%, #FDF5FF), 
+                    linear-gradient(90deg, #FDF5FF, rgba(0, 0, 0, 0) 15%),
+                    linear-gradient(270deg, #FDF5FF, rgba(0, 0, 0, 0) 15%),
+                    url("../../../images/background/squares4.svg");
+        background-repeat: no-repeat;
+        opacity: 0.15;    
+
+        width: calc(util.rem(665) + 5vw);
+        height: calc(util.rem(255) + 5vw);
+    }
+
+    &--work {
+        align-content: start !important;
+        text-align: left;
+    }
+
+    &__work {
+        font-size: fonts.$desktop-m;
+        text-align: left;
+
+        margin: 0 0 util.rem(32) 0;
+
+        &-header {
+            font-size: calc(fonts.$desktop-h1 + 0.5vw);
+            font-weight: fonts.$medium;
+    
+            line-height: calc(util.rem(42) + 0.5vw);
+    
+            &:after {
+                position: relative;
+                
+                display: block;
+        
+                content: "";
+        
+                border-style: solid;
+                border-width: 0 0 util.rem(6) 0;
+                border-color: var(--purple);
+        
+                width: 100%;
+            }
+        }
+
+        &-header2 {
+            font-size: fonts.$desktop-h2;
+            font-weight: fonts.$medium;
+
+            margin: 0;
+        }
+    }
+
+    &-company {
+        display: grid;
+        grid-template: auto / repeat(2, 1fr);
+
+        font-size: fonts.$desktop-m;
+
+        &__name {
+            justify-self: start;
+        }
+
+        &__date {
+            justify-self: end;
+        }
+    }
+
+    &-experience {
+        font-size: fonts.$desktop-m;
+
+        margin-bottom: util.rem(64);
+
+        margin: util.rem(8) 0 0 util.rem(16);
+
+        &__exp {
+            margin: util.rem(8) 0 util.rem(24);
+
+            & li {
+                padding: util.rem(4) 0;
+            }
+        }
+
+        &--vanco {
+            margin-bottom: util.rem(48);
+        }
+
+        &--fem {
+            margin-bottom: util.rem(48);
+        }
+    }
+}

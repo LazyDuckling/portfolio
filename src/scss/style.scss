@@ -13,13 +13,13 @@
 */
 
 // Desktop forwards
-@forward "desktop/breakpoints";
 @forward "desktop/main";
+@forward "desktop/nav";
+@forward "desktop/content";
+@forward "desktop/headers";
 @forward "desktop/about";
 @forward "desktop/projects";
-@forward "desktop/nav";
-@forward "desktop/headers";
-@forward "desktop/content";
+@forward "desktop/work";
 @forward "desktop/footer";
 
 // Global forwards
