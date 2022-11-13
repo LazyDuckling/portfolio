@@ -8,6 +8,8 @@
 
 .nav__content-link:hover::after {
     transform: scaleX(1);
+
+    cursor: pointer;
 }
 
 .footer a:hover {
