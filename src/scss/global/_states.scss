@@ -12,11 +12,21 @@
     cursor: pointer;
 }
 
-.footer a:hover {
-    color: var(--purple);
+.nav {
+    &__content {
+        &-icon:hover {
+            color: var(--purple);
+            
+            cursor: pointer;
+        }
+    }
 }
 
 .content__projects-btn--purple:hover {
     background-color: var(--dark-purple);
     border-color: var(--dark-purple);
+}
+
+.footer a:hover {
+    color: var(--purple);
 }

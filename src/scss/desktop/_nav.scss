@@ -25,6 +25,10 @@
 
         padding: 0;
 
+        &--mobile {
+            display: none;
+        }
+
         &-link {
             display: inline-block;
 

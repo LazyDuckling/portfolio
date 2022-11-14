@@ -2,6 +2,56 @@
 @use "../global/typography" as fonts;
 
 @media screen and (max-width: 740px) {
+    // Navigation for smaller screens
+    .nav {
+        height: 0;
+        
+        &__content {
+            display: none;
+
+            &-mobile {
+                display: none;
+                grid-template: auto / 1fr;
+
+                margin: 0;
+            }
+
+            &-link {
+                max-width: fit-content;
+
+                &--active {
+                    margin: util.rem(4) 0;
+                }
+
+                &--inactive {
+                    margin: util.rem(4) 0;
+                }
+            }
+
+            &-icon {
+                margin-left: util.rem(16);
+
+                transition: color 200ms;
+            }
+
+            &--mobile {
+                display: grid;
+                grid-area: 1 / 1 / 2 / 4;
+            
+                position: sticky;
+                top: 0;
+            
+                z-index: 20;
+            
+                background-color: var(--off-white);
+            
+                box-shadow: 0px 0px 250px rgba(0, 0, 0, 0.25);
+
+                width: 100%;
+            }
+        }
+    }
+
     // Limit the content to 90vw to keep some space around both sides
     .content {
         grid-template: max-content / 90vw;
@@ -16,6 +66,7 @@
             }
         }
 
+        // Mobile layout for the Projects page
         &__projects {
             grid-template: auto repeat(2, 1fr) / minmax(0, 1fr);
 
