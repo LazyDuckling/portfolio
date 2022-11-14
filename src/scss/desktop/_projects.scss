@@ -78,7 +78,13 @@
             font-weight: fonts.$medium;
 
             margin: 0;
+
+            &--mobile {
+                display: none;
+            }
         }
+
+
 
         &-left {
             padding: util.rem(32) 0 util.rem(32) util.rem(32);
@@ -104,7 +110,7 @@
 
             padding: util.rem(4) util.rem(8);
 
-            margin-right: util.rem(12);
+            //margin-right: util.rem(12);
 
             &-img {
                 align-self: center;
@@ -126,6 +132,10 @@
 
                 transition: color 200ms, background-color 200ms, border 200ms;
             }
+        }
+
+        &-btn:nth-child(2) {
+            margin: 0 util.rem(12);
         }
 
         &-link {

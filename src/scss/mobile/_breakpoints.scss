@@ -1,1 +1,138 @@
 @use "../util/functions" as util;
+@use "../global/typography" as fonts;
+
+@media screen and (max-width: 740px) {
+    // Limit the content to 90vw to keep some space around both sides
+    .content {
+        grid-template: max-content / 90vw;
+
+        &__background {
+            width: 100vw;
+
+            &-about, &-projects, &-work {
+                background-size: cover;
+                 
+                width: 100vw;
+            }
+        }
+
+        &__projects {
+            grid-template: auto repeat(2, 1fr) / minmax(0, 1fr);
+
+            &-header2 {
+                display: none;
+                text-align: center;
+
+                &--mobile {
+                    display: block;
+
+                    grid-area: 1 / 1 / 2 / 2;
+
+                    margin: util.rem(32) util.rem(16) util.rem(16);
+                }
+            }
+
+            &-left {
+                grid-area: 3 / 1 / 4 / 2;
+
+                padding: util.rem(16) util.rem(32) util.rem(32);
+            }
+
+            &-right {
+                grid-area: 2 / 1 / 3 / 2;
+
+                background: linear-gradient(0deg, #FDF8FF 10%, rgba(253, 248, 255, 0) 63.84%, #FDF8FF 100%), url(../../../images/background/fem-project.png);
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-size: cover;
+            }
+
+            &-buttons {
+                justify-content: center;
+            }
+
+            &-btn--purple {
+                margin: 0 auto;
+
+                text-align: center;
+            }
+        }
+    }
+
+    // Switch from set width to half the content size per column
+    .footer {
+        grid-template: auto / 1fr repeat(2, 45vw) 1fr;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    // Switch the footer to 2 rows instead of using columns under 470px
+    .footer {
+        grid-template: repeat(2, auto) / 1fr 90vw 1fr;
+
+        &__nav {
+            grid-area: 1 / 2 / 2 / 3;
+            justify-self: center;
+
+            &-link {
+                margin: util.rem(22.5) util.rem(24) util.rem(8) 0;
+            }
+        }
+
+        &__copyright {
+            grid-area: 2 / 2 / 3 / 3;
+            justify-self: center;
+
+            margin-bottom: util.rem(24);
+        }
+    }
+}
+
+// Change the width of the dates on the work experience page so it's not cramped with the company name
+@media screen and (max-width: 440px) {
+    .content {
+        &__background {
+            background-size: 200%;
+        }
+        &-company {
+            grid-template: repeat(2, auto) / auto;
+
+            &__date {
+                justify-self: start;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 379px) {
+    .content {
+        &__projects {
+            &-btn {
+                &-img {
+                    min-width: util.rem(48);
+                    height: util.rem(48);
+                }
+            }
+        }
+    }
+}
+
+// Adjust the layout for tech/language buttons in the projects on small displays so they're on top of one another instead of in a row
+@media screen and (max-width: 350px) {
+    .content {
+        &__projects {
+            &-buttons {
+                flex-direction: column;
+            }
+
+            &-btn {
+                align-self:center;
+
+                max-width: fit-content;
+
+                margin: util.rem(8) 0;
+            }
+        }
+    }
+}
+

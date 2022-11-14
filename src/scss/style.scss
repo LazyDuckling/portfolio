@@ -1,10 +1,6 @@
 // Util forwards
 @forward "util/functions";
 
-// Mobile forwards
-@forward "mobile/breakpoints";
-@forward "mobile/main";
-
 // Tablet forwards
 /*
 @forward "tablet/typography";
@@ -15,12 +11,15 @@
 // Desktop forwards
 @forward "desktop/main";
 @forward "desktop/nav";
-@forward "desktop/content";
+@forward "desktop/welcome";
 @forward "desktop/headers";
 @forward "desktop/about";
 @forward "desktop/projects";
 @forward "desktop/work";
 @forward "desktop/footer";
+
+// Mobile forwards
+@forward "mobile/breakpoints";
 
 // Global forwards
 @forward "global/variables";
