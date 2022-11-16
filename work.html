@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../dist/css/style.css">
 
-    <title>Emily's Portfolio - About</title>
+    <title>Emily's Portfolio - Work</title>
   </head>
   <body>
     <main>
@@ -19,38 +19,90 @@
       <!-- Navigation -->
       <nav class="nav">
         <ul class="nav__content">
-          <li class="nav__content-link nav__content-link--inactive"><a href="../index.html">Welcome</a></li><li class="nav__content-link nav__content-link--active"><a href="../pages/about.html">About</a></li><li class="nav__content-link nav__content-link--inactive"><a href="../pages/projects.html">Projects</a></li><li class="nav__content-link nav__content-link--inactive"><a href="../pages/work.html">Work</a></li><li class="nav__content-link nav__content-link--inactive"><a href="mailto:lazyduckling.dev">Contact</a></li>
+          <li class="nav__content-link nav__content-link--inactive"><a href="../index.html">Welcome</a></li><li class="nav__content-link nav__content-link--inactive"><a href="../pages/about.html">About</a></li><li class="nav__content-link nav__content-link--inactive"><a href="../pages/projects.html">Projects</a></li><li class="nav__content-link nav__content-link--active"><a href="../pages/work.html">Work</a></li><li class="nav__content-link nav__content-link--inactive"><a href="mailto:lazyduckling.dev">Contact</a></li>
         </ul>
 
         <div class="nav__content nav__content--mobile">
           <svg class="nav__content-icon" width="62" height="62" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><title>Menu</title><path d="M21 18H3V16H21V18ZM21 13H3V11H21V13ZM21 8H3V6H21V8Z" fill="currentcolor"/></svg>
           
           <ul class="nav__content-mobile">
-            <li class="nav__content-link nav__content-link--inactive"><a href="../index.html">Welcome</a></li><li class="nav__content-link nav__content-link--active"><a href="../pages/about.html">About</a></li><li class="nav__content-link nav__content-link--inactive"><a href="../pages/projects.html">Projects</a></li><li class="nav__content-link nav__content-link--inactive"><a href="../pages/work.html">Work</a></li><li class="nav__content-link nav__content-link--inactive"><a href="mailto:lazyduckling.dev">Contact</a></li>
+            <li class="nav__content-link nav__content-link--inactive"><a href="../index.html">Welcome</a></li><li class="nav__content-link nav__content-link--inactive"><a href="../pages/about.html">About</a></li><li class="nav__content-link nav__content-link--inactive"><a href="../pages/projects.html">Projects</a></li><li class="nav__content-link nav__content-link--active"><a href="../pages/work.html">Work</a></li><li class="nav__content-link nav__content-link--inactive"><a href="mailto:lazyduckling.dev">Contact</a></li>
           </ul>
         </div>
       </nav>
 
       <!-- Page Content -->
-      <div class="content__background-about"></div>
+      <div class="content__background-work"></div>
       <header class="header">
-        <h1 class="content__about-header">
-          About Me
+        <h1 class="content__work-header">
+          Work
         </h1>
       </header>
-      <section class="content content--about">
-        <p class="content__about">
-            I am an aspiring <span class="content--bold">Front End Web Developer</span>. I'm currently learning <span class="content--bold">JavaScript</span> and looking to jump into <span class="content--bold">React</span> next!
+
+      <section class="content content--work">
+        <p class="content__work">
+          I am currently open to <span class="content--bold">full time</span> and <span class="content--bold">contractor</span> job opportunities. I still have a lot to learn, but I am always willing to put in the effort to pick up new skills and improve upon what I already know.
         </p>
-        <p class="content__about">
-          I use the following languages in my projects and work:
-        </p>
-        <p class="logos">
-            <span><img class="logos__img" src="../images/icons/html.svg" alt="HTML5 Icon"><br>HTML</span>
-            <span><img class="logos__img" src="../images/icons/css.svg" alt="CSS3 Icon"><br>CSS</span>
-            <span><img class="logos__img logos__img--sass" src="../images/icons/sass.svg" alt="Sass/SCSS Icon"><br>Sass</span>
-            <span class="logos--lastrow"><img class="logos__img" src="../images/icons/javascript.svg" alt="JavaScript Icon"><br>JavaScript</span>
-        </p>
+
+        <h2 class="content__work-header2">Experience</h2>
+
+        <div class="content-company">
+          <span class="content-company__name">Vanco Payments</span>
+          <span class="content-company__date">November 2017 - Now</span>
+        </div>
+
+        <div class="content-experience content-experience--vanco">
+          <span class="content-experience__title">
+            <span class="content--bold">Production Specialist</span> / User Experience and Design
+          </span>
+          <ul class="content-experience__exp">
+            <li>Create intuitive forms and Web Store items for school districts to take payments.</li>
+            <li>Design custom solutions with HTML and CSS for clients with additional requirements.</li>
+            <li>Add to and improve existing knowledge base with best practices and educational content related to front end web development.</li>
+          </ul>
+
+          <span class="content-experience__title">
+            <span class="content--bold">Scripting</span> / Automation of internal and client processes
+          </span>
+          <ul class="content-experience__exp">
+            <li>Automation of client processes with Visual Basic for Excel and Powershell.</li>
+            <li>Automation of internal repetitive tasks within Excel with Visual Basic macros.</li>
+            <li>Automation of internal processes with Powershell and APIs.</li>
+          </ul>
+        </div>
+
+
+        <div class="content-company">
+          <span class="content-company__name">Frontend Mentor</span>
+          <span class="content-company__date">July 2022 - Now</span>
+        </div>
+
+        <div class="content-experience content-experience--fem">
+          <span class="content-experience__title">
+            <span class="content--bold">Frontend Web Development</span> / Creation of sites from Figma files
+          </span>
+          <ul class="content-experience__exp">
+            <li>Create websites from given Figma design files and specified requirements.</li>
+            <li>Projects completed with HTML5, CSS3, Sass/SCSS and JavaScript, then submitted as Solutions on Frontend Mentor website.</li>
+            <li>Participate in Frontend Mentor community, helping other aspiring developers to improve their submitted solutions.</li>
+          </ul>
+        </div>
+
+
+          <div class="content-company">
+            <span class="content-company__name">Minnesota Vein Center</span>
+            <span class="content-company__date">August 2022 - Now</span>
+          </div>
+  
+          <div class="content-experience content-experience--fem">
+            <span class="content-experience__title">
+              <span class="content--bold">Frontend Web Development</span> / Various website updates
+            </span>
+            <ul class="content-experience__exp">
+              <li>Update and add pages with new information, images and styling as requested. Involves some light PHP work, most of it using what is already there.</li>
+              <li>Add blog posts through Wordpress.</li>
+              <li>Search Engine Optimization.</li>
+            </ul>
       </section>
 
       <!-- Footer -->
@@ -65,7 +117,6 @@
             © Copyright 2022
           </p>
       </footer>
-
     </main>
     <script src="../dist/js/main.js"></script>
   </body>
